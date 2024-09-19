@@ -1,4 +1,4 @@
-package org.example;
+package task1;
 
 import task1.Book;
 import task1.Student;
