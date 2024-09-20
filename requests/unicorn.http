@@ -1,0 +1,23 @@
+POST http://crudcrud.com/api/394d43ff2f6b437a8731b101106b72e1/unicorn
+Content-Type: application/json
+
+{
+  "name": "asd",
+  "tailColor": "Red"
+}
+
+####
+GET http://crudcrud.com/api/394d43ff2f6b437a8731b101106b72e1/unicorn/66ed4af1fe837603e816c953
+Accept: application/json
+
+###
+DELETE http://crudcrud.com/api/394d43ff2f6b437a8731b101106b72e1/unicorn/66ed42a3fe837603e816c944
+Accept: application/json
+
+###
+PUT https://crudcrud.com/api/394d43ff2f6b437a8731b101106b72e1/unicorn/66ed4af1fe837603e816c953
+Content-Type: application/json
+
+{
+  "tailColor": "Yellow"
+}

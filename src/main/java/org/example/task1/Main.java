@@ -1,8 +1,4 @@
-package task1;
-
-import task1.Book;
-import task1.Student;
-import task1.Watch;
+package org.example.task1;
 
 public class Main {
     public static void main(String[] args) {
