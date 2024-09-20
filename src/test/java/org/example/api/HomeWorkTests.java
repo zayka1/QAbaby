@@ -1,10 +1,10 @@
-package org.example;
+package org.example.api;
 
 import io.restassured.RestAssured;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import org.apache.http.HttpStatus;
-import org.example.api.UnicornRequests;
+import org.example.api.models.Unicorn;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -17,13 +17,15 @@ public class HomeWorkTests {
     @BeforeAll
     public static void setupTests() {
         RestAssured.filters(new RequestLoggingFilter(), new ResponseLoggingFilter());
-        RestAssured.baseURI = "https://crudcrud.com/api/394d43ff2f6b437a8731b101106b72e1";
+        RestAssured.baseURI = "https://crudcrud.com/api/6dd61bdca6e04ca3b84ff0ea908c2896";
     }
 
     @Test
     public void createUnicorn() {
 
-        UnicornRequests.createUnicorn("\n" + "{\n" + "  \"name\": \"asd\",\n" + "  \"tailColor\": \"Red\"\n" + "}");
+        Unicorn unicorn = new Unicorn("asd", "Red");
+
+        UnicornRequests.createUnicorn(unicorn.toJson());
 
     }
 
